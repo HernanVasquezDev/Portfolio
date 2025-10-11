@@ -1,6 +1,6 @@
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
-import { Hero, About, Projects, Experience, Contact, Skills } from './components/sections/index';
+import { Hero, About, Projects, Experience, Contact, Skills, Education } from './components/sections/index';
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         < Skills />
         <Projects />
         <Experience />
+        < Education />
         <Contact />
       </main>
       <Footer />
