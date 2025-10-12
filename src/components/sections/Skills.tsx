@@ -25,13 +25,14 @@ export const Skills = () => (
 
         <div className="space-y-6">
           {[
-            { name: "JavaScript", level: 95 },
-            { name: "TypeScript", level: 85 },
-            { name: "Python", level: 80 },
-            { name: "Node.js", level: 90 },
-            { name: "React", level: 85 },
-            { name: "FastAPI", level: 75 },
-            { name: "PostgreSQL / MongoDB", level: 80 },
+            { name: "JavaScript", level: 80 },
+            { name: "TypeScript", level: 80 },
+            { name: "Python", level: 70 },
+            { name: "Java", level: 60 },
+            { name: "Node.js", level: 80 },
+            { name: "React", level: 80 },
+            { name: "FastAPI", level: 70 },
+            { name: "Mysql /PostgreSQL / MongoDB", level: 80 },
             { name: "TailwindCSS / HTML / CSS", level: 90 },
             { name: "Git / GitHub", level: 85 },
             { name: "Scrum / Agile", level: 80 },
