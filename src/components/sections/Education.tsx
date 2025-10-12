@@ -52,7 +52,7 @@ export const Education = () => (
 
           <div className="md:w-1/2 md:text-right pr-0 md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">Técnico en Sistemas</h3>
-            <p className="italic text-gray-400 text-sm md:text-base">SENA — 2018</p>
+            <p className="italic text-gray-400 text-sm md:text-base">SENA — 2021 </p>
           </div>
 
           <div className="md:w-1/2 md:pl-10">
