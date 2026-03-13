@@ -59,7 +59,7 @@ export const Experience = () => (
               Desarrollador Full Stack
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              RiwiCoder Bootcamp (2025)
+              Proyectos independientes y grupales (2025)
             </p>
           </div>
 
