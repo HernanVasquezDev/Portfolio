@@ -11,7 +11,7 @@ export const Hero = () => (
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      {/* 📸 Imagen de perfil */}
+      {/*Imagen de perfil */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -19,7 +19,7 @@ export const Hero = () => (
         className="mb-6 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[var(--color-primary)] shadow-[0_0_25px_rgba(0,173,181,0.2)]"
       >
         <img
-          src="/images/profile.jpg" // 📁 coloca tu imagen en /public/images/profile.jpg
+          src="/images/profile.jpg"
           alt="Hernán Vásquez"
           className="w-full h-full object-cover"
         />
