@@ -63,31 +63,7 @@ export const Education = () => (
           </div>
         </motion.div>
 
-        {/* Bootcamp RiwiCoder */}
-        <motion.div
-          className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.24 }}
-          viewport={{ once: true }}
-        >
-          <span className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-primary)] rounded-full shadow-[0_0_12px_var(--color-primary)]"></span>
-
-          <div className="md:w-1/2 md:text-right pr-0 md:pr-10">
-            <h3 className="text-2xl font-semibold text-[var(--color-light)]">Bootcamp RiwiCoder</h3>
-            <p className="italic text-gray-400 text-sm md:text-base">RiwiCoder — 2025</p>
-          </div>
-
-          <div className="md:w-1/2 md:pl-10">
-            <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-              <li>Entrenamiento intensivo en desarrollo Full Stack: SPAs/MPAs, autenticación, APIs y buenas prácticas.</li>
-              <li>Proyectos reales con React, Node.js, FastAPI y despliegue en plataformas modernas.</li>
-            </ul>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-
+        
     {/* línea decorativa móvil */}
     <div className="md:hidden mt-8 w-[2px] h-16 mx-auto bg-[var(--color-primary)]/40 rounded-full"></div>
   </section>
