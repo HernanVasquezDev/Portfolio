@@ -4,8 +4,7 @@ import SectionTitle from "../ui/SectionTitle";
 export const Education = () => (
   <section
     id="education"
-    className="relative py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200"
-  >
+    className="relative py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200">
     <SectionTitle>Educación</SectionTitle>
 
     <div className="max-w-5xl mx-auto mt-10 relative">
@@ -64,7 +63,9 @@ export const Education = () => (
         </motion.div>
 
         
-    {/* línea decorativa móvil */}
-    <div className="md:hidden mt-8 w-[2px] h-16 mx-auto bg-[var(--color-primary)]/40 rounded-full"></div>
+        {/* línea decorativa móvil */}
+        <div className="md:hidden mt-8 w-[2px] h-16 mx-auto bg-[var(--color-primary)]/40 rounded-full"></div>
+      </div>
+    </div>
   </section>
 );

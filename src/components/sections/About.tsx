@@ -38,7 +38,7 @@ export const About = () => (
       >
         He trabajado en el desarrollo de aplicaciones usando <span className="text-[var(--color-primary-light)] font-medium">Node.js</span>,{" "}
         <span className="text-[var(--color-primary-light)] font-medium">React</span> y{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">FastAPI</span>.  
+        <span className="text-[var(--color-primary-light)] font-medium">Spring Boot</span>.  
         Mi objetivo es crear herramientas que aporten valor real, manteniendo un enfoque claro, estructurado y humano.
       </motion.p>
     </motion.div>

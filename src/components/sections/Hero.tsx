@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export const Hero = () => (
   <section
@@ -49,28 +50,46 @@ export const Hero = () => (
         Disfruto combinar diseño, lógica y estrategia para dar forma a productos que realmente aporten valor.
       </motion.p>
 
-      {/* Botones */}
+      {/* Botones con iconos */}
       <motion.div
-        className="flex flex-wrap justify-center gap-4"
+        className="flex flex-wrap justify-center gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <a
+        <motion.a
           href="mailto:vasquezaraujoh@gmail.com"
-          className="px-6 py-3 rounded-xl border border-[--color-primary] text-[--color-primary] font-semibold hover:bg-[--color-primary] hover:text-gray-900 transition-all duration-300 shadow-md hover:shadow-[--color-primary]/30"
+          className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900 transition-all duration-300 shadow-md hover:shadow-[--color-primary]/50"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          title="Contáctame"
         >
-          Contáctame
-        </a>
+          <Mail size={28} />
+        </motion.a>
 
-        <a
-          href="https://github.com/nachjv19"
+        <motion.a
+          href="https://github.com/HernanVasquezDev"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 rounded-xl border border-[--color-primary] text-[--color-primary] font-semibold hover:bg-[--color-primary] hover:text-gray-900 transition-all duration-300 shadow-md hover:shadow-[--color-primary]/30"
+          className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900 transition-all duration-300 shadow-md hover:shadow-[--color-primary]/50"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          title="Mi GitHub"
         >
-          Mi GitHub
-        </a>
+          <Github size={28} />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/hernan-jose-vasquez-araujo-fullstack-java-developer/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900 transition-all duration-300 shadow-md hover:shadow-[--color-primary]/50"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          title="Mi LinkedIn"
+        >
+          <Linkedin size={28} />
+        </motion.a>
       </motion.div>
     </motion.div>
   </section>
