@@ -48,8 +48,8 @@ const softSkills = [
 ];
 
 export const Skills = () => {
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
-  const [revealedCard, setRevealedCard] = useState(null);
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+  const [revealedCard, setRevealedCard] = useState<number | null>(null);
 
   const handleDeckClick = () => {
     if (selectedCardIndex === null) {
