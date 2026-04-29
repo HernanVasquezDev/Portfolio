@@ -11,7 +11,7 @@ const projects: Project[] = [
     tech: ["React", "Node.js", "Express", "PDF"],
     github: "https://github.com/nachjv19/vibrant-release-1",
     featured: true,
-    role: "fullStack"
+    role: "fullstack"
   },
   {
     title: "Bookverse",

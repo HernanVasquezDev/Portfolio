@@ -6,5 +6,5 @@ export type Project = {
   demo?: string;
   featured?: boolean;
 
-  role: "frontend" | "backend" | "fullStack"
+  role: "frontend" | "backend" | "fullstack"
 };
