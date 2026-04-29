@@ -16,6 +16,7 @@ html, body {
   background: var(--color-dark);
   color: var(--color-light);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
