@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedLogo from "./animatedLogo"; 
+import AnimatedLogo from "./AnimatedLogo";
 const sections = [
   { id: "hero", label: "Inicio" },
   { id: "about", label: "Sobre mí" },
