@@ -4,4 +4,7 @@ export type Project = {
   tech: string[];
   github: string;
   demo?: string;
+  featured?: boolean;
+
+  role: "frontend" | "backend" | "fullStack"
 };

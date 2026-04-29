@@ -1,5 +1,6 @@
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import WhatsAppButton from './components/layout/WhatsappButton';
 import { Hero, About, Projects, Experience, Contact, Skills, Education } from './components/sections/index';
 
 
@@ -16,6 +17,7 @@ function App() {
         < Education />
         <Contact />
       </main>
+      <WhatsAppButton />
       <Footer />
     </div>
   );

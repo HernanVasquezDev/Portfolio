@@ -24,10 +24,8 @@ export const About = () => (
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 1 }}
       >
-        Soy estudiante de Ingeniería de Sistemas.  
-        Mi experiencia combina la gestión empresarial con el desarrollo tecnológico,  
-        permitiéndome abordar proyectos con una mirada integral: unir la estrategia del negocio  
-        con soluciones digitales funcionales y bien diseñadas.
+        Me interesa entender los problemas antes de escribir código.
+        Disfruto construir soluciones claras y bien estructuradas, donde cada decisión tenga sentido tanto a nivel técnico como funcional.
       </motion.p>
 
       <motion.p
@@ -36,11 +34,23 @@ export const About = () => (
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 1 }}
       >
-        He trabajado en el desarrollo de aplicaciones usando <span className="text-[var(--color-primary-light)] font-medium">Node.js</span>,{" "}
+        He trabajado desarrollando aplicaciones web utilizando{" "}
+        <span className="text-[var(--color-primary-light)] font-medium">Java</span>,{" "}
+        <span className="text-[var(--color-primary-light)] font-medium">Spring Boot</span>,{" "}
         <span className="text-[var(--color-primary-light)] font-medium">React</span> y{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">Spring Boot</span>.  
-        Mi objetivo es crear herramientas que aporten valor real, manteniendo un enfoque claro, estructurado y humano.
+        <span className="text-[var(--color-primary-light)] font-medium">Node.js</span>.
+        Me enfoco en escribir código mantenible, aplicar buenas prácticas y mejorar continuamente con cada proyecto que desarrollo.
       </motion.p>
+
+      <motion.p
+        className="text-base text-gray-500 mt-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 1 }}
+      >
+        Busco seguir creciendo como desarrollador FullStack mientras aporto soluciones que realmente generen impacto.
+      </motion.p>
+
     </motion.div>
   </section>
 );
