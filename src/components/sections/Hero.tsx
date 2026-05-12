@@ -31,7 +31,7 @@ export const Hero = () => (
 
       {/* Nombre */}
       <h1 className="text-5xl md:text-6xl font-bold mb-4 text-[--color-light] leading-tight">
-        Hernán Vásquez
+        Hernan Vasquez
       </h1>
 
       {/* Rol */}

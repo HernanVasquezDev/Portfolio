@@ -14,7 +14,7 @@ import {
   SiTailwindcss,
   SiGit,
   SiGithub,
-  SiSpringboot
+  SiSpringboot,
 } from "react-icons/si";
 
 import { DiJava } from "react-icons/di";

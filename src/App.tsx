@@ -1,7 +1,7 @@
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import WhatsAppButton from './components/layout/WhatsappButton';
-import { Hero, About, Projects, Experience, Contact, Skills, Education } from './components/sections/index';
+import { Hero, Projects, Experience, Contact, Skills, Education } from './components/sections/index';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <main className="space-y-32 pt-16">
         <Hero />
-        <About />
+        {/* <About /> */}
         < Skills />
         <Projects />
         <Experience />

@@ -27,7 +27,7 @@ export const Experience = () => (
               Full Stack Developer
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              BlackBirdLabs (Riwi) — 2025
+              BlackBirdLabs — 2025
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export const Experience = () => (
         </motion.div>
 
         {/* GENERATION (JAVA BOOTCAMP) */}
-        <motion.div
+        {/* <motion.div
           className="relative flex flex-col md:flex-row md:items-center gap-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export const Experience = () => (
               </li>
             </ul>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* BASE PERSONAL / INICIO */}
         <motion.div
