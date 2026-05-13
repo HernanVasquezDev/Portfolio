@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Portfolio Personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un portfolio personal construido con **React**, **TypeScript** y **Vite**. Incluye secciones de presentación, experiencia, educación, habilidades, proyectos y contacto.
 
-Currently, two official plugins are available:
+## Tecnologías principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- PrimeReact + PrimeIcons
+- React Intersection Observer
 
-## React Compiler
+## Estructura del proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/App.tsx` - Entrada principal de la aplicación.
+- `src/main.tsx` - Inicializa React y monta la aplicación.
+- `src/components/layout/` - Componentes de layout como `Navbar`, `Footer`, `AnimatedLogo`, `ScrollToTop` y `WhatsappButton`.
+- `src/components/sections/` - Secciones de la página: `Hero`, `About`, `Skills`, `Projects`, `Experience`, `Education`, `Contact`.
+- `src/components/ui/` - Componentes reutilizables como `ProjectCard`, `SectionTitle`, `StackScrollController` y `TextUI`.
+- `src/hooks/useScrollAnimation.ts` - Hook para animaciones al hacer scroll.
+- `src/types/` - Tipos TypeScript para datos del proyecto.
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 18+ recomendado
+- npm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clona el repositorio:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/tu-usuario/Portfolio.git
+cd Portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+## Uso local
+
+Para ejecutar el proyecto en modo de desarrollo:
+
+```bash
+npm run dev
+```
+
+Después de iniciar, abre la URL que muestre Vite (normalmente `http://localhost:5173`).
+
+## Construcción para producción
+
+Para compilar el proyecto y generar los archivos listos para producción:
+
+```bash
+npm run build
+```
+
+## Vista previa de producción
+
+Para previsualizar la versión de producción localmente:
+
+```bash
+npm run preview
+```
+
+## Linter
+
+Para ejecutar ESLint en todo el proyecto:
+
+```bash
+npm run lint
+```
+
+## Despliegue
+
+Puedes desplegar este proyecto en cualquier servicio estático compatible con archivos de salida de Vite, por ejemplo:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
+- Surge
+
+### Pasos generales de despliegue
+
+1. Ejecuta `npm run build`.
+2. Sube la carpeta `dist` al servicio de hosting.
+3. Configura la ruta base si tu deploy no está en la raíz del dominio.
+
+## Contacto
+
+Puedes usar la sección de contacto del propio portfolio para recibir mensajes o actualizar la información personal en `src/components/sections/Contact.tsx`.
+
+---
+
+> Nota: Si agregas un backend propio, puedes extender el despliegue con servidores como Express o funciones serverless, pero la versión actual es principalmente frontend con React + Vite.

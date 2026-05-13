@@ -18,7 +18,7 @@ import {
 
 import { DiJava } from "react-icons/di";
 
-
+ 
 const technicalSkills = [
   { name: "Java", Icon: DiJava, color: "#007396" },
   { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
