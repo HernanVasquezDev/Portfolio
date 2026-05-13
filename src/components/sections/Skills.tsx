@@ -7,7 +7,6 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiReact,
-  SiFastapi,
   SiMysql,
   SiPostgresql,
   SiMongodb,
@@ -21,19 +20,18 @@ import { DiJava } from "react-icons/di";
 
 
 const technicalSkills = [
-  { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Java", Icon: DiJava, color: "#007396" },
+  { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
   { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
   { name: "Node.js", Icon: SiNodedotjs, color: "#68A063" },
-  { name: "React", Icon: SiReact, color: "#61DAFB" },
-  { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
   { name: "MySQL", Icon: SiMysql, color: "#00758F" },
   { name: "PostgreSQL", Icon: SiPostgresql, color: "#336791" },
   { name: "MongoDB", Icon: SiMongodb, color: "#13AA52" },
-  { name: "TailwindCSS", Icon: SiTailwindcss, color: "#06B6D4" },
   { name: "Git", Icon: SiGit, color: "#F05032" },
   { name: "GitHub", Icon: SiGithub, color: "#181717" },
-  { name: "Java", Icon: DiJava, color: "#007396" },
-  { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
+  { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+  { name: "React", Icon: SiReact, color: "#61DAFB" },
+  { name: "TailwindCSS", Icon: SiTailwindcss, color: "#06B6D4" },
 ];
 
 const softSkills = [
