@@ -4,7 +4,7 @@ import AnimatedLogo from "./AnimatedLogo";
 
 const sections = [
   { id: "hero", label: "Inicio" },
-  { id: "about", label: "Sobre mí" },
+  // { id: "about", label: "Sobre mí" },
   { id: "projects", label: "Proyectos" },
   { id: "experience", label: "Experiencia" },
   { id: "education", label: "Educación" },
