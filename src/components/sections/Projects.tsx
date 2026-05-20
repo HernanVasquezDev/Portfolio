@@ -5,37 +5,104 @@ import type { Project } from "../../types/Projects";
 
 const projects: Project[] = [
   {
-    title: "Vibrant Release",
+    title: "EasyPOS",
+
     description:
-      "Aplicación de reservas con gestión de disponibilidad y generación automática de facturas en PDF. Diseñada para manejar flujos reales de negocio.",
-    tech: ["React", "Node.js", "Express", "PDF"],
-    github: "https://github.com/nachjv19/vibrant-release-1",
+      "Aplicación POS mobile offline-first enfocada en accesibilidad para adultos mayores y pequeños comercios.",
+
+    tech: [
+      "React Native",
+      "TypeScript",
+      "Firebase",
+      "Expo EAS",
+      "AsyncStorage",
+    ],
+
+    image: "/images/project/EasyPOS.png",
+
     featured: true,
-    role: "fullstack"
+
+    role: "fullstack",
+
+    status: "In Progress",
+
+    links: [
+      {
+        label: "Ver Producto",
+        url: "https://landing-easy-pos.vercel.app/",
+        variant: "primary",
+      },
+
+      {
+        label: "GitHub",
+        url: "https://github.com/HernanVasquezDev/EasyPOS",
+        variant: "secondary",
+      },
+    ],
   },
+
   {
-    title: "Bookverse",
+    title: "Full Stack Management Platform",
+
     description:
-      "Plataforma tipo e-commerce con autenticación, inventario y panel admin orientado a procesos comerciales.",
-    tech: ["React", "Node.js", "PostgreSQL", "JWT"],
-    github: "https://github.com/nachjv19/bookverse",
-    role: "backend"
+      "Sistema full stack desarrollado con Next.js y NestJS utilizando TypeScript end-to-end y despliegue completo en producción.",
+
+    tech: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+    ],
+
+    image: "/images/project/PrescriptionsLogin.png",
+
+    role: "fullstack",
+
+    status: "Live",
+
+    links: [
+      {
+        label: "Live",
+        url: "https://prescriptionfrontend.onrender.com/login",
+        variant: "primary",
+      },
+
+      {
+        label: "Frontend",
+        url: "https://github.com/tu-user/frontend",
+        variant: "secondary",
+      },
+
+      {
+        label: "Backend",
+        url: "https://github.com/tu-user/backend",
+        variant: "secondary",
+      },
+    ],
   },
+
   {
-    title: "API de Tareas",
+    title: "Legal Firm Platform",
+
     description:
-      "API REST con CRUD completo y manejo de estado para consumo dinámico de datos.",
-    tech: ["JavaScript", "Axios", "JSON"],
-    github: "https://github.com/nachjv19",
-    role: "backend"
-  },
-  {
-    title: "Calculadora Avanzada",
-    description:
-      "Aplicación en Python con operaciones extendidas e historial exportable.",
-    tech: ["Python"],
-    github: "https://github.com/nachjv19",
-    role: "frontend"
+      "Sitio web corporativo desarrollado con Astro y TypeScript enfocado en rendimiento, accesibilidad y posicionamiento SEO.",
+
+    tech: ["Astro", "TypeScript", "SEO"],
+
+    image: "/images/project/landinglaw.png",
+
+    role: "frontend",
+
+    status: "Live",
+
+    links: [
+      {
+        label: "Visitar Sitio",
+        url: "https://abogadalizethcarrillo.netlify.app",
+        variant: "primary",
+      },
+    ],
   },
 ];
 
@@ -44,14 +111,13 @@ export const Projects = () => {
     "all" | "frontend" | "backend" | "fullstack"
   >("all");
 
-  // 🔥 FILTRADO
   const filteredProjects =
     filter === "all"
       ? projects
       : projects.filter((p) => p.role === filter);
 
-  // 🔥 FEATURED DINÁMICO SEGÚN FILTRO
-  const featured = filteredProjects.find((p) => p.featured) || filteredProjects[0];
+  const featured =
+    filteredProjects.find((p) => p.featured) || filteredProjects[0];
 
   const others = filteredProjects.filter((p) => p !== featured);
 
@@ -61,11 +127,11 @@ export const Projects = () => {
       className="py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <SectionTitle subtitle="Proyectos donde aplico lógica, arquitectura y resolución de problemas reales">
+        <SectionTitle subtitle="Soluciones enfocadas en producto, arquitectura y experiencia de usuario">
           Proyectos Destacados
         </SectionTitle>
 
-        {/* 🎛️ FILTROS */}
+        {/* FILTERS */}
         <div className="flex justify-center gap-3 mt-8 flex-wrap">
           {["all", "frontend", "backend", "fullstack"].map((f) => (
             <button
@@ -82,87 +148,169 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* 🔥 HERO PROJECT DINÁMICO */}
+        {/* FEATURED PROJECT */}
         {featured && (
           <motion.div
             layout
-            className="mt-12 mb-16 p-8 rounded-3xl border border-gray-800 bg-gradient-to-br from-gray-900 to-gray-800 shadow-xl text-left"
+            className="mt-14 mb-20 overflow-hidden rounded-3xl border border-gray-800 bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl text-left"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             whileHover={{
-              boxShadow: "0 0 30px rgba(0,173,181,0.2)",
+              boxShadow: "0 0 40px rgba(0,173,181,0.15)",
             }}
           >
-            <p className="text-xs text-[--color-primary] mb-2 uppercase tracking-wide">
-              Proyecto Destacado
-            </p>
+            {/* IMAGE */}
+            {featured.image && (
+              <div className="w-full h-[280px] overflow-hidden border-b border-gray-800">
+                <img
+                  src={featured.image}
+                  alt={featured.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
 
-            <h3 className="text-2xl md:text-3xl font-bold mb-3">
-              {featured.title}
-            </h3>
+            <div className="p-8">
+              <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
+                <div>
+                  <p className="text-xs text-[--color-primary] uppercase tracking-widest mb-2">
+                    Proyecto Destacado
+                  </p>
 
-            <p className="text-gray-400 mb-4 max-w-3xl">
-              {featured.description}
-            </p>
+                  <h3 className="text-3xl font-bold">
+                    {featured.title}
+                  </h3>
+                </div>
 
-            <div className="flex flex-wrap gap-2 mb-6">
-              {featured.tech.map((t, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-gray-800 px-3 py-1 rounded-full text-gray-300"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
+                {featured.status && (
+                  <span
+                    className={`text-xs px-3 py-1 rounded-full border ${
+                      featured.status === "Live"
+                        ? "border-green-500 text-green-400"
+                        : "border-yellow-500 text-yellow-400"
+                    }`}
+                  >
+                    {featured.status}
+                  </span>
+                )}
+              </div>
 
-            <div className="flex gap-4">
-              <a
-                href={featured.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2 rounded-lg border border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900 transition"
-              >
-                Ver código
-              </a>
+              <p className="text-gray-400 max-w-3xl leading-relaxed mb-6">
+                {featured.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {featured.tech.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs bg-gray-800 px-3 py-1 rounded-full text-gray-300 border border-gray-700"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* FEATURED LINKS */}
+              <div className="flex flex-wrap gap-4">
+                {featured.links?.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-5 py-2 rounded-lg transition ${
+                      link.variant === "primary"
+                        ? "bg-[--color-primary] text-primary-900 font-medium hover:opacity-90"
+                        : "border border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
 
-        {/* ⚡ GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* OTHER PROJECTS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {others.map((proj, index) => (
             <motion.div
               layout
               key={index}
-              className="rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 p-6 text-left"
+              className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 text-left"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{
-                scale: 1.04,
-                boxShadow: "0 0 20px rgba(0,173,181,0.15)",
+                y: -6,
+                boxShadow: "0 0 25px rgba(0,173,181,0.12)",
               }}
             >
-              <h3 className="text-lg font-semibold mb-2">{proj.title}</h3>
+              {proj.image && (
+                <div className="h-48 overflow-hidden border-b border-gray-800">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
 
-              <p className="text-gray-400 text-sm mb-4">
-                {proj.description}
-              </p>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-semibold">
+                    {proj.title}
+                  </h3>
 
-              <p className="text-xs text-gray-500 mb-4">
-                {proj.tech.join(" · ")}
-              </p>
+                  {proj.status && (
+                    <span
+                      className={`text-[10px] px-2 py-1 rounded-full border ${
+                        proj.status === "Live"
+                          ? "border-green-500 text-green-400"
+                          : "border-yellow-500 text-yellow-400"
+                      }`}
+                    >
+                      {proj.status}
+                    </span>
+                  )}
+                </div>
 
-              <a
-                href={proj.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[--color-primary] hover:underline"
-              >
-                Ver código →
-              </a>
+                <p className="text-gray-400 text-sm leading-relaxed mb-5">
+                  {proj.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {proj.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-[11px] bg-gray-800 px-2 py-1 rounded-full text-gray-300 border border-gray-700"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {/* PROJECT LINKS */}
+                <div className="flex gap-4 flex-wrap">
+                  {proj.links?.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-sm transition ${
+                        link.variant === "primary"
+                          ? "text-[--color-primary] hover:underline"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      {link.label} →
+                    </a>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
