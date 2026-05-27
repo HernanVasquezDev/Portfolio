@@ -14,6 +14,9 @@ import {
   SiGit,
   SiGithub,
   SiSpringboot,
+  SiAngular,
+  SiDocker
+
 } from "react-icons/si";
 
 import { DiJava } from "react-icons/di";
@@ -27,10 +30,13 @@ const technicalSkills = [
   { name: "MySQL", Icon: SiMysql, color: "#00758F" },
   { name: "PostgreSQL", Icon: SiPostgresql, color: "#336791" },
   { name: "MongoDB", Icon: SiMongodb, color: "#13AA52" },
+  { name: "Docker", Icon: SiDocker, color: "#0080ff" },
   { name: "Git", Icon: SiGit, color: "#F05032" },
   { name: "GitHub", Icon: SiGithub, color: "#181717" },
   { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Angular", Icon: SiAngular, color: "#ff8c00" },
   { name: "React", Icon: SiReact, color: "#61DAFB" },
+  { name: "ReactNative", Icon: SiReact, color: "#61DAFB" },
   { name: "TailwindCSS", Icon: SiTailwindcss, color: "#06B6D4" },
 ];
 
@@ -110,7 +116,7 @@ export const Skills = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    initial={{ color: "#6b7280" }} // Gris opaco inicial
+                    initial={{ color: "#6b7280" }}
                     whileHover={{ color: skill.color }}
                     transition={{ duration: 0.2 }}
                   >

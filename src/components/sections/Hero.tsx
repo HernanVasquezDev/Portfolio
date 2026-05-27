@@ -40,7 +40,7 @@ export const Hero = () => {
           {/* floating badge */}
           <div className="absolute bottom-2 -right-3 px-4 py-2 rounded-full bg-[#111] border border-white/10 backdrop-blur-md shadow-lg">
             <span className="text-sm text-gray-300">
-              Java • Spring • React
+              Java • Spring • React • Angular 
             </span>
           </div>
         </motion.div>
@@ -62,7 +62,7 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.45 }}
         >
-          Full Stack Developer especializado en Java & Spring Boot
+          Full Stack Developer
         </motion.h2>
 
         {/* DESCRIPTION */}
