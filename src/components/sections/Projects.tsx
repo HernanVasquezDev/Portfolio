@@ -35,14 +35,14 @@ const projects: Project[] = [
 
       {
         label: "GitHub",
-        url: "https://github.com/HernanVasquezDev/EasyPOS",
+        url: "https://github.com/HernanVasquezDev/EasyPOS.git",
         variant: "secondary",
       },
     ],
   },
 
   {
-    title: "Full Stack Management Platform",
+    title: "Plataforma de Prescripciones",
 
     description:
       "Sistema full stack desarrollado con Next.js y NestJS utilizando TypeScript end-to-end y despliegue completo en producción.",
@@ -70,25 +70,25 @@ const projects: Project[] = [
 
       {
         label: "Frontend",
-        url: "https://github.com/tu-user/frontend",
+        url: "https://github.com/HernanVasquezDev/PrescriptionFrontend.git",
         variant: "secondary",
       },
 
       {
         label: "Backend",
-        url: "https://github.com/tu-user/backend",
+        url: "https://github.com/HernanVasquezDev/PrescriptionsBackend.git",
         variant: "secondary",
       },
     ],
   },
 
   {
-    title: "Legal Firm Platform",
+    title: "Lawyer Landing Page",
 
     description:
       "Sitio web corporativo desarrollado con Astro y TypeScript enfocado en rendimiento, accesibilidad y posicionamiento SEO.",
 
-    tech: ["Astro", "TypeScript", "SEO"],
+    tech: ["Astro", "TypeScript", "SEO", "React"],
 
     image: "/images/project/landinglaw.png",
 
