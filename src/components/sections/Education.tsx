@@ -60,7 +60,7 @@ export const Education = () => (
               Full Stack Java Bootcamp
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              Generation — Formación intensiva (3 meses · 8h/día) · En curso
+              Generation
             </p>
           </div>
 
