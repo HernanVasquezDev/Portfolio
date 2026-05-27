@@ -52,7 +52,7 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Hernán Vásquez
+          Hernan Vasquez
         </motion.h1>
 
         {/* ROLE */}
