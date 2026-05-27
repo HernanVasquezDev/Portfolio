@@ -57,7 +57,7 @@ export const Education = () => (
 
           <div className="md:w-1/2 md:text-right md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">
-              Full Stack Java Bootcamp
+              Full Stack Java
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
               Generation
