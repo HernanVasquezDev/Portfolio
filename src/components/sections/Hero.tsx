@@ -94,7 +94,7 @@ export const Hero = () => {
           </button>
 
           <a
-            href="public\images\project\CV_HernanVasquez.pdf"
+            href="/images/project/CV_HernanVasquez.pdf"
             download
             className="px-6 py-3 rounded-xl border border-white/10 text-gray-300 hover:text-white hover:bg-white/5 transition"
           >
