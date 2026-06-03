@@ -18,7 +18,7 @@ import {
   SiDocker
 
 } from "react-icons/si";
-
+import { GrLinkDown } from "react-icons/gr";
 import { DiJava } from "react-icons/di";
 
  
@@ -144,9 +144,10 @@ export const Skills = () => {
             <h3 className="text-2xl font-semibold">Soft Skills</h3>
           </div>
 
-          <p className="text-gray-400 mb-6">
-            Descubre cómo trabajo a través de estas cartas 👇
-          </p>
+          <div className="flex items-center justify-center gap-2 text-gray-400 mb-6">
+            <p>Descubre cómo trabajo a través de estas cartas</p>
+            <GrLinkDown className="w-5 h-5 flex-shrink-0" />
+          </div>
 
           {/* CARTA REVELADA */}
           <div className="h-44 flex items-center justify-center mb-6">
@@ -239,7 +240,7 @@ export const Skills = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              Has descubierto todas mis mayores fortalezas
+              Has descubierto mis mayores fortalezas
             </motion.p>
           )}
         </motion.div>

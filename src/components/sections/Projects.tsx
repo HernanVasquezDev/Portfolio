@@ -114,7 +114,7 @@ export const Projects = () => {
   const filteredProjects =
     filter === "all"
       ? projects
-      : projects.filter((p) => p.role === filter);
+      : projects.filter((p) => p.role === filter);0
 
   const featured =
     filteredProjects.find((p) => p.featured) || filteredProjects[0];
