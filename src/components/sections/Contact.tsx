@@ -109,7 +109,7 @@ export const Contact = () => {
             label={isSending ? "Enviando..." : "Enviar mensaje"}
             icon={isSending ? "pi pi-spin pi-spinner" : "pi pi-send"}
             disabled={isSending}
-            className="w-full !bg-cyan-300 !border-none !text-black !font-medium"
+            className="w-full !bg-cyan-300 !border-none !text-black !font-medium hover:opacity-90 transition"
           />
         </form>
       </motion.div>
