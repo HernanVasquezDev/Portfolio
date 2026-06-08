@@ -56,13 +56,13 @@ const projects: Project[] = [
       variant: "primary",
     },
     {
-      label: "projects.coroto.backend",
-      url: "https://github.com/fabian1031/coroto-backend.git",
+      label: "projects.coroto.frontend",
+      url: "https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git",
       variant: "secondary",
     },
     {
-      label: "projects.coroto.frontend",
-      url: "https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git",
+      label: "projects.coroto.backend",
+      url: "https://github.com/fabian1031/coroto-backend.git",
       variant: "secondary",
     },
   ],
