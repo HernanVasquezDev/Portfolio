@@ -16,7 +16,6 @@ const projects: Project[] = [
       "AsyncStorage",
     ],
     image: "/images/project/EasyPOS.png",
-    featured: true,
     role: "fullstack",
     status: "In Progress",
     links: [
@@ -32,6 +31,43 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+  title: "projects.coroto.title",
+  description: "projects.coroto.description",
+  tech: [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "Docker",
+    "MySQL",
+    "Bootstrap",
+    "JWT",
+    "OpenPay",
+    "PHP"
+  ],
+  image: "/images/project/Coroto.png",
+  featured: true,
+  role: "fullstack",
+  status: "Live",
+  links: [
+    {
+      label: "projects.coroto.live",
+      url: "https://coroto.online/index.html",
+      variant: "primary",
+    },
+    {
+      label: "projects.coroto.backend",
+      url: "https://github.com/fabian1031/coroto-backend.git",
+      variant: "secondary",
+    },
+    {
+      label: "projects.coroto.frontend",
+      url: "https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git",
+      variant: "secondary",
+    },
+  ],
+},
+
 
   {
     title: "projects.prescription.title",

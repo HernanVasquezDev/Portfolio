@@ -1,195 +1,225 @@
 {
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "experience": "Experience",
-    "education": "Education",
-    "contact": "Contact"
-  },
-  "hero": {
-    "title": "Hi, I'm Hernan Vasquez",
-    "subtitle": "Full Stack Developer",
-    "paragraph": "I am passionate about solving business problems through technology. I enjoy analyzing processes, designing scalable solutions, and building software that helps organizations improve efficiency, automate workflows, and achieve their goals.",
-    "cta": {
-      "viewProjects": "View projects",
-      "contactMe": "Contact me",
-      "downloadCV": "Download CV"
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "experience": "Experience",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Hi, I'm Hernan Vasquez",
+        "subtitle": "Full Stack Developer",
+        "paragraph": "I am passionate about solving business problems through technology. I enjoy analyzing processes, designing scalable solutions, and building software that helps organizations improve efficiency, automate workflows, and achieve their goals.",
+        "cta": {
+            "viewProjects": "View projects",
+            "contactMe": "Contact me",
+            "downloadCV": "Download CV"
+        }
+    },
+    "about": {
+        "title": "About me",
+        "paragraph1": "I like understanding problems before writing code. I enjoy building clear and well-structured solutions where every decision makes sense technically and functionally.",
+        "paragraph2": "I have worked on web applications using Java, Spring Boot, React and Node.js. I focus on writing maintainable code, applying best practices, and improving continuously with each project.",
+        "paragraph3": "I am looking to keep growing as a FullStack developer while delivering solutions that make a real impact."
+    },
+    "skills": {
+        "title": "Skills",
+        "technicalTitle": "Technical Skills",
+        "softTitle": "Soft Skills",
+        "softDeck": "Discover how I work through these cards",
+        "softDeckHint": "Click the deck to reveal a card",
+        "cardsFound": "{{count}} / 8 cards revealed",
+        "softSkills": [
+            "Effective communication",
+            "Critical thinking",
+            "Adaptability",
+            "Problem solving",
+            "Teamwork",
+            "Organization",
+            "Technical leadership",
+            "Analytical curiosity"
+        ],
+        "finalMessage": "You've uncovered my strongest skills"
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "subtitle": "Product-focused solutions, architecture and UX",
+        "featured": {
+            "label": "Featured Project"
+        },
+        "filters": {
+            "all": "ALL",
+            "frontend": "FRONTEND",
+            "backend": "BACKEND",
+            "fullstack": "FULLSTACK"
+        },
+        "easypos": {
+            "title": "EasyPOS",
+            "status": "In Progress",
+            "description": "Offline-first mobile POS app focused on accessibility for older adults and small businesses.",
+            "tags": [
+                "React Native",
+                "TypeScript",
+                "Firebase",
+                "Expo EAS",
+                "AsyncStorage"
+            ],
+            "product": "View product",
+            "github": "GitHub"
+        },
+        "prescription": {
+            "title": "Prescription Platform",
+            "status": "Live",
+            "description": "Full stack system built with Next.js and NestJS using TypeScript end-to-end and deployed to production.",
+            "tags": [
+                "Next.js",
+                "NestJS",
+                "TypeScript",
+                "PostgreSQL",
+                "Prisma"
+            ],
+            "live": "Live ",
+            "frontend": "Frontend ",
+            "backend": "Backend "
+        },
+        "lawyer": {
+            "title": "Lawyer Landing Page",
+            "status": "Live",
+            "description": "Corporate website built with Astro and TypeScript focused on performance, accessibility and SEO.",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "SEO",
+                "React"
+            ],
+            "visit": "Visit Site "
+        },
+        "coroto": {
+            "title": "Coroto Marketplace",
+            "status": "Live",
+            "description": "Marketplace for certified refurbished hardware and electronics. Led the technical direction, product planning and team coordination while working with Agile methodologies. Built a complete platform featuring JWT authentication, payment integration, product recommendation chatbot and a customer experience designed to increase trust in second-hand technology purchases.",
+            "tags": [
+                "Java",
+                "Spring Boot",
+                "Spring Security",
+                "Docker",
+                "Bootstrap"
+            ],
+            "visit": "Visit Site"
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "freelance": {
+            "role": "Freelance Full Stack Developer",
+            "date": "January 2026 - Present",
+            "bullets": [
+                "End-to-end web solutions for clients and independent projects, from requirements to production.",
+                "Requirements analysis, technical problem solving and scalable software construction.",
+                "Building modern interfaces with React and integrating REST APIs focused on UX and performance."
+            ]
+        },
+        "blackbird": {
+            "role": "Full Stack Developer",
+            "company": "BlackBirdLabs",
+            "date": "March 2025 - November 2025",
+            "bullets": [
+                "Developed web and mobile applications with React, React Native, Node.js and TypeScript.",
+                "Built scalable APIs with Express and NestJS under modular architecture.",
+                "Implemented SQL/NoSQL databases (MySQL, PostgreSQL, MongoDB).",
+                "Used ORMs, authentication, logging (Morgan) and external API consumption.",
+                "Worked under agile methodologies (Scrum) in collaborative development teams."
+            ]
+        },
+        "multidespensas": {
+            "role": "Full Stack Developer Jr",
+            "company": "Multidespensas SAS",
+            "date": "January 2024 - December 2024",
+            "bullets": [
+                "Business process analysis and requirements gathering with users from different areas.",
+                "Design and development of an internal ERP to centralize operations and improve traceability.",
+                "Backend development with NestJS, TypeScript and PostgreSQL under a modular architecture and REST APIs.",
+                "Frontend development with React, TypeScript and PrimeReact for managing internal processes.",
+                "Automation of operational flows, optimizing management times and reducing manual tasks."
+            ]
+        },
+        "telsolutions": {
+            "role": "BI Analyst & Data Automation",
+            "company": "TelSolutions SAS",
+            "date": "January 2023 -  December 2023",
+            "bullets": [
+                "Designed interactive Power BI dashboards to monitor business indicators and support decision-making.",
+                "Automated analysis and transformation processes using Python and Pandas.",
+                "Migrated and structured data from Excel to PostgreSQL to centralize and optimize access.",
+                "Implemented customer segmentation and profiling based on historical purchasing patterns.",
+                "Generated strategic reports and forecasting models to support sales and opportunity tracking."
+            ]
+        }
+    },
+    "education": {
+        "title": "Education",
+        "engineering": {
+            "degree": "Systems Engineering",
+            "school": "CUN",
+            "status": "Ongoing",
+            "bullets": [
+                "Foundations of software engineering, databases, networks and system architecture.",
+                "Logical and structured problem solving applied to computational problems."
+            ]
+        },
+        "generation": {
+            "degree": "Full Stack Java",
+            "school": "Generation",
+            "bullets": [
+                "Intensive Full Stack training with Java, Spring Boot, REST APIs and modern backend architecture.",
+                "Built complete web applications with frontend in JavaScript and Bootstrap and backend in Java with Spring Boot.",
+                "Focused on best practices, teamwork, agile methodologies and real work environment simulation.",
+                "Solved real problems through practical projects and weekly deliverables."
+            ]
+        },
+        "sena": {
+            "degree": "Systems Technician",
+            "school": "SENA",
+            "date": "2021",
+            "bullets": [
+                "Foundations in technical support, equipment maintenance and computer networks.",
+                "Introduction to programming and technical problem solving.",
+                "Hands-on training that strengthened the transition to software development."
+            ]
+        }
+    },
+    "contact": {
+        "title": "Contact me",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "Your email",
+        "messagePlaceholder": "Your message",
+        "send": "Send message",
+        "sending": "Sending...",
+        "toast": {
+            "incomplete": {
+                "summary": "Incomplete fields",
+                "detail": "Please complete all fields."
+            },
+            "success": {
+                "summary": "Message sent!",
+                "detail": "Your message was sent successfully"
+            },
+            "serverError": {
+                "summary": "Send error",
+                "detail": "There was a server problem."
+            },
+            "connectionError": {
+                "summary": "Connection error",
+                "detail": "Could not reach the server."
+            }
+        }
+    },
+    "footer": {
+        "heading": "Do you have a project or technical challenge?",
+        "paragraph": "I specialize in analyzing complex problems, designing scalable solutions and building robust applications focused on performance, maintainability and UX.",
+        "letsTalk": "Let's talk",
+        "name": "Hernan Jose Vasquez Araujo",
+        "role": "Full Stack Developer",
+        "copyright": "© 2026 All rights reserved."
     }
-  },
-  "about": {
-    "title": "About me",
-    "paragraph1": "I like understanding problems before writing code. I enjoy building clear and well-structured solutions where every decision makes sense technically and functionally.",
-    "paragraph2": "I have worked on web applications using Java, Spring Boot, React and Node.js. I focus on writing maintainable code, applying best practices, and improving continuously with each project.",
-    "paragraph3": "I am looking to keep growing as a FullStack developer while delivering solutions that make a real impact."
-  },
-  "skills": {
-    "title": "Skills",
-    "technicalTitle": "Technical Skills",
-    "softTitle": "Soft Skills",
-    "softDeck": "Discover how I work through these cards",
-    "softDeckHint": "Click the deck to reveal a card",
-    "cardsFound": "{count} / 8 cards revealed",
-    "softSkills": [
-      "Effective communication",
-      "Critical thinking",
-      "Adaptability",
-      "Problem solving",
-      "Teamwork",
-      "Organization",
-      "Technical leadership",
-      "Analytical curiosity"
-    ],
-    "finalMessage": "You've uncovered my strongest skills"
-  },
-  "projects": {
-    "title": "Featured Projects",
-    "subtitle": "Product-focused solutions, architecture and UX",
-    "featured": {
-      "label": "Featured Project"
-    },
-    "filters": {
-      "all": "ALL",
-      "frontend": "FRONTEND",
-      "backend": "BACKEND",
-      "fullstack": "FULLSTACK"
-    },
-    "easypos": {
-      "title": "EasyPOS",
-      "status": "In Progress",
-      "description": "Offline-first mobile POS app focused on accessibility for older adults and small businesses.",
-      "tags": ["React Native", "TypeScript", "Firebase", "Expo EAS", "AsyncStorage"],
-      "product": "View product",
-      "github": "GitHub"
-    },
-    "prescription": {
-      "title": "Prescription Platform",
-      "status": "Live",
-      "description": "Full stack system built with Next.js and NestJS using TypeScript end-to-end and deployed to production.",
-      "tags": ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
-      "live": "Live ",
-      "frontend": "Frontend ",
-      "backend": "Backend "
-    },
-    "lawyer": {
-      "title": "Lawyer Landing Page",
-      "status": "Live",
-      "description": "Corporate website built with Astro and TypeScript focused on performance, accessibility and SEO.",
-      "tags": ["Astro", "TypeScript", "SEO", "React"],
-      "visit": "Visit Site "
-    }
-  },
-  "experience": {
-    "title": "Experience",
-    "freelance": {
-      "role": "Freelance Full Stack Developer",
-      "date": "January 2026 - Present",
-      "bullets": [
-        "End-to-end web solutions for clients and independent projects, from requirements to production.",
-        "Requirements analysis, technical problem solving and scalable software construction.",
-        "Building modern interfaces with React and integrating REST APIs focused on UX and performance."
-      ]
-    },
-    "blackbird": {
-      "role": "Full Stack Developer",
-      "company": "BlackBirdLabs",
-      "date": "March 2025 - November 2025",
-      "bullets": [
-        "Developed web and mobile applications with React, React Native, Node.js and TypeScript.",
-        "Built scalable APIs with Express and NestJS under modular architecture.",
-        "Implemented SQL/NoSQL databases (MySQL, PostgreSQL, MongoDB).",
-        "Used ORMs, authentication, logging (Morgan) and external API consumption.",
-        "Worked under agile methodologies (Scrum) in collaborative development teams."
-      ]
-    },
-    "multidespensas": {
-      "role": "Full Stack Developer Jr",
-      "company": "Multidespensas SAS",
-      "date": "January 2024 - December 2024",
-      "bullets": [
-        "Business process analysis and requirements gathering with users from different areas.",
-        "Design and development of an internal ERP to centralize operations and improve traceability.",
-        "Backend development with NestJS, TypeScript and PostgreSQL under a modular architecture and REST APIs.",
-        "Frontend development with React, TypeScript and PrimeReact for managing internal processes.",
-        "Automation of operational flows, optimizing management times and reducing manual tasks."
-      ]
-    },
-    "telsolutions": {
-      "role": "BI Analyst & Data Automation",
-      "company": "TelSolutions SAS",
-      "date": "January 2023 -  December 2023",
-      "bullets": [
-        "Designed interactive Power BI dashboards to monitor business indicators and support decision-making.",
-        "Automated analysis and transformation processes using Python and Pandas.",
-        "Migrated and structured data from Excel to PostgreSQL to centralize and optimize access.",
-        "Implemented customer segmentation and profiling based on historical purchasing patterns.",
-        "Generated strategic reports and forecasting models to support sales and opportunity tracking."
-      ]
-    }
-  },
-  "education": {
-    "title": "Education",
-    "engineering": {
-      "degree": "Systems Engineering",
-      "school": "CUN",
-      "status": "Ongoing",
-      "bullets": [
-        "Foundations of software engineering, databases, networks and system architecture.",
-        "Logical and structured problem solving applied to computational problems."
-      ]
-    },
-    "generation": {
-      "degree": "Full Stack Java",
-      "school": "Generation",
-      "bullets": [
-        "Intensive Full Stack training with Java, Spring Boot, REST APIs and modern backend architecture.",
-        "Built complete web applications with frontend in JavaScript and Bootstrap and backend in Java with Spring Boot.",
-        "Focused on best practices, teamwork, agile methodologies and real work environment simulation.",
-        "Solved real problems through practical projects and weekly deliverables."
-      ]
-    },
-    "sena": {
-      "degree": "Systems Technician",
-      "school": "SENA",
-      "date": "2021",
-      "bullets": [
-        "Foundations in technical support, equipment maintenance and computer networks.",
-        "Introduction to programming and technical problem solving.",
-        "Hands-on training that strengthened the transition to software development."
-      ]
-    }
-  },
-  "contact": {
-    "title": "Contact me",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
-    "messagePlaceholder": "Your message",
-    "send": "Send message",
-    "sending": "Sending...",
-    "toast": {
-      "incomplete": {
-        "summary": "Incomplete fields",
-        "detail": "Please complete all fields."
-      },
-      "success": {
-        "summary": "Message sent!",
-        "detail": "Your message was sent successfully"
-      },
-      "serverError": {
-        "summary": "Send error",
-        "detail": "There was a server problem."
-      },
-      "connectionError": {
-        "summary": "Connection error",
-        "detail": "Could not reach the server."
-      }
-    }
-  },
-  "footer": {
-    "heading": "Do you have a project or technical challenge?",
-    "paragraph": "I specialize in analyzing complex problems, designing scalable solutions and building robust applications focused on performance, maintainability and UX.",
-    "letsTalk": "Let's talk",
-    "name": "Hernan Jose Vasquez Araujo",
-    "role": "Full Stack Developer",
-    "copyright": "© 2026 All rights reserved."
-  }
 }

@@ -1,196 +1,228 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "projects": "Proyectos",
-    "experience": "Experiencia",
-    "education": "Educación",
-    "contact": "Contacto"
-  },
-  "hero": {
-    "title": "Hola, soy Hernan Vasquez",
-    "subtitle": "Full Stack Developer",
-    "paragraph": "Analizo procesos, identifico oportunidades de mejora y las transformo en soluciones digitales funcionales. Disfruto entender cómo funcionan las cosas, encontrar lo que puede optimizarse y construir herramientas que generen un impacto real.",
-    "cta": {
-      "viewProjects": "Ver proyectos",
-      "contactMe": "Contactarme",
-      "downloadCV": "Descargar CV"
+    "nav": {
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "education": "Educación",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Hola, soy Hernan Vasquez",
+        "subtitle": "Full Stack Developer",
+        "paragraph": "Analizo procesos, identifico oportunidades de mejora y las transformo en soluciones digitales funcionales. Disfruto entender cómo funcionan las cosas, encontrar lo que puede optimizarse y construir herramientas que generen un impacto real.",
+        "cta": {
+            "viewProjects": "Ver proyectos",
+            "contactMe": "Contactarme",
+            "downloadCV": "Descargar CV"
+        }
+    },
+    "about": {
+        "title": "Sobre mí",
+        "paragraph1": "Me interesa entender los problemas antes de escribir código. Disfruto construir soluciones claras y bien estructuradas, donde cada decisión tenga sentido tanto a nivel técnico como funcional.",
+        "paragraph2": "He trabajado desarrollando aplicaciones web utilizando Java, Spring Boot, React y Node.js. Me enfoco en escribir código mantenible, aplicar buenas prácticas y mejorar continuamente con cada proyecto que desarrollo.",
+        "paragraph3": "Busco seguir creciendo como desarrollador FullStack mientras aporto soluciones que realmente generen impacto."
+    },
+    "skills": {
+        "title": "Habilidades",
+        "technicalTitle": "Habilidades Técnicas",
+        "softTitle": "Habilidades Blandas",
+        "softDeck": "Descubre cómo trabajo a través de estas cartas",
+        "softDeckHint": "Haz clic en el mazo para revelar una carta",
+        "cardsFound": "{{count}} / 8 cartas descubiertas",
+        "softSkills": [
+            "Comunicación efectiva",
+            "Pensamiento crítico",
+            "Adaptabilidad",
+            "Resolución de problemas",
+            "Trabajo en equipo",
+            "Organización",
+            "Liderazgo técnico",
+            "Curiosidad analítica"
+        ],
+        "finalMessage": "Has descubierto mis mayores fortalezas"
+    },
+    "projects": {
+        "title": "Proyectos Destacados",
+        "subtitle": "Soluciones enfocadas en producto, arquitectura y experiencia de usuario",
+        "featured": {
+            "label": "Proyecto Destacado"
+        },
+        "filters": {
+            "all": "ALL",
+            "frontend": "FRONTEND",
+            "backend": "BACKEND",
+            "fullstack": "FULLSTACK"
+        },
+        "easypos": {
+            "label": "Proyecto Destacado",
+            "title": "EasyPOS",
+            "status": "In Progress",
+            "description": "Aplicación POS mobile offline-first enfocada en accesibilidad para adultos mayores y pequeños comercios.",
+            "tags": [
+                "React Native",
+                "TypeScript",
+                "Firebase",
+                "Expo EAS",
+                "AsyncStorage"
+            ],
+            "product": "Ver Producto",
+            "github": "GitHub"
+        },
+        "prescription": {
+            "title": "Plataforma de Prescripciones",
+            "status": "Live",
+            "description": "Sistema full stack desarrollado con Next.js y NestJS utilizando TypeScript end-to-end y despliegue completo en producción.",
+            "tags": [
+                "Next.js",
+                "NestJS",
+                "TypeScript",
+                "PostgreSQL",
+                "Prisma"
+            ],
+            "live": "Live ",
+            "frontend": "Frontend ",
+            "backend": "Backend "
+        },
+        "lawyer": {
+            "title": "Lawyer Landing Page",
+            "status": "Live",
+            "description": "Sitio web corporativo desarrollado con Astro y TypeScript enfocado en rendimiento, accesibilidad y posicionamiento SEO.",
+            "tags": [
+                "Astro",
+                "TypeScript",
+                "SEO",
+                "React"
+            ],
+            "visit": "Visitar Sitio "
+        },
+        "coroto": {
+            "title": "Coroto Marketplace",
+            "status": "Live",
+            "description": "Marketplace de hardware usado, reacondicionado y garantizado. Lideré la definición técnica del producto, la arquitectura y la coordinación del equipo bajo metodologías ágiles. Se desarrolló una plataforma completa con autenticación JWT, pasarela de pagos, chatbot de recomendaciones y una experiencia enfocada en generar confianza en la compra de tecnología usada.",
+            "tags": [
+                "Java",
+                "Spring Boot",
+                "Spring Security",
+                "Docker",
+                "Bootstrap"
+            ],
+            "live": "Live ",
+            "frontend": "Frontend ",
+            "backend": "Backend "
+        }
+    },
+    "experience": {
+        "title": "Experiencia",
+        "freelance": {
+            "role": "Freelance Full Stack Developer",
+            "date": "Enero 2026 - Presente",
+            "bullets": [
+                "Desarrollo de soluciones web para clientes y proyectos independientes end-to-end, desde la definición de requerimientos hasta el despliegue en producción.",
+                "Análisis de requerimientos, identificación y resolución de problemas técnicos, optimización de procesos y construcción de software escalable y mantenible.",
+                "Construcción de interfaces modernas con React e integración de APIs REST enfocadas en UX y rendimiento."
+            ]
+        },
+        "blackbird": {
+            "role": "Full Stack Developer",
+            "company": "BlackBirdLabs",
+            "date": "Marzo 2025 - Noviembre 2025",
+            "bullets": [
+                "Desarrollo de aplicaciones web y móviles con React, React Native, Node.js y TypeScript.",
+                "Construcción de APIs escalables con Express y NestJS bajo arquitectura modular.",
+                "Implementación de bases de datos SQL/NoSQL (MySQL, PostgreSQL, MongoDB).",
+                "Uso de ORMs, autenticación, logging (Morgan) y consumo de APIs externas.",
+                "Trabajo bajo metodologías ágiles (Scrum) en equipos de desarrollo colaborativo."
+            ]
+        },
+        "multidespensas": {
+            "role": "Full Stack Developer Jr",
+            "company": "Multidespensas SAS",
+            "date": "2024",
+            "bullets": [
+                "Análisis de procesos empresariales y levantamiento de requerimientos con usuarios de diferentes áreas.",
+                "Diseño y desarrollo de un ERP interno para centralizar operaciones y mejorar la trazabilidad.",
+                "Desarrollo backend con NestJS, TypeScript y PostgreSQL bajo arquitectura modular y APIs REST.",
+                "Desarrollo frontend con React, TypeScript y PrimeReact para la gestión de procesos internos.",
+                "Automatización de flujos operativos, optimizando tiempos de gestión y reduciendo tareas manuales."
+            ]
+        },
+        "telsolutions": {
+            "role": "BI Analyst & Data Automation",
+            "company": "TelSolutions SAS",
+            "date": "2023 - 2024",
+            "bullets": [
+                "Diseño de dashboards interactivos en Power BI para monitoreo de indicadores comerciales y apoyo en la toma de decisiones.",
+                "Automatización de procesos de análisis y transformación de datos utilizando Python y Pandas.",
+                "Migración y estructuración de información desde Excel a PostgreSQL para centralizar y optimizar el acceso.",
+                "Implementación de segmentación y perfilamiento de clientes basada en patrones históricos de compra.",
+                "Generación de reportes estratégicos y modelos de proyección comercial para apoyar ventas y seguimiento de oportunidades."
+            ]
+        }
+    },
+    "education": {
+        "title": "Educación",
+        "engineering": {
+            "degree": "Ingeniería de Sistemas",
+            "school": "CUN",
+            "status": "En curso",
+            "bullets": [
+                "Formación en fundamentos de ingeniería de software, bases de datos, redes y arquitectura de sistemas.",
+                "Desarrollo de pensamiento lógico y estructurado aplicado a problemas computacionales."
+            ]
+        },
+        "generation": {
+            "degree": "Full Stack Java",
+            "school": "Generation",
+            "bullets": [
+                "Formación intensiva en desarrollo Full Stack con Java, Spring Boot, APIs REST y arquitectura backend moderna.",
+                "Desarrollo de aplicaciones web completas con frontend en JavaScript y Bootstrap y backend en Java con Spring Boot.",
+                "Enfoque en buenas prácticas, trabajo en equipo, metodologías ágiles y simulación de entorno laboral real.",
+                "Resolución de problemas reales mediante proyectos prácticos y entregables semanales."
+            ]
+        },
+        "sena": {
+            "degree": "Técnico en Sistemas",
+            "school": "SENA",
+            "date": "2021",
+            "bullets": [
+                "Bases en soporte técnico, mantenimiento de equipos y redes de computadoras.",
+                "Introducción a la programación y resolución de problemas técnicos.",
+                "Formación práctica que fortaleció la transición hacia el desarrollo de software."
+            ]
+        }
+    },
+    "contact": {
+        "title": "Contáctame",
+        "namePlaceholder": "Tu nombre",
+        "emailPlaceholder": "Tu correo electrónico",
+        "messagePlaceholder": "Tu mensaje",
+        "send": "Enviar mensaje",
+        "sending": "Enviando...",
+        "toast": {
+            "incomplete": {
+                "summary": "Campos incompletos",
+                "detail": "Por favor completa todos los campos."
+            },
+            "success": {
+                "summary": "¡Mensaje enviado!",
+                "detail": "Tu mensaje ha sido enviado correctamente."
+            },
+            "serverError": {
+                "summary": "Error al enviar",
+                "detail": "Hubo un problema con el servidor."
+            },
+            "connectionError": {
+                "summary": "Error de conexión",
+                "detail": "No se pudo contactar con el servidor."
+            }
+        }
+    },
+    "footer": {
+        "heading": "¿Tienes un proyecto o un desafío técnico?",
+        "paragraph": "Me especializo en analizar problemas complejos, diseñar soluciones escalables y construir aplicaciones robustas enfocadas en rendimiento, mantenibilidad y experiencia de usuario.",
+        "letsTalk": "Hablemos",
+        "name": "Hernan Jose Vasquez Araujo",
+        "role": "Full Stack Developer",
+        "copyright": "© 2026 Todos los derechos reservados."
     }
-  },
-  "about": {
-    "title": "Sobre mí",
-    "paragraph1": "Me interesa entender los problemas antes de escribir código. Disfruto construir soluciones claras y bien estructuradas, donde cada decisión tenga sentido tanto a nivel técnico como funcional.",
-    "paragraph2": "He trabajado desarrollando aplicaciones web utilizando Java, Spring Boot, React y Node.js. Me enfoco en escribir código mantenible, aplicar buenas prácticas y mejorar continuamente con cada proyecto que desarrollo.",
-    "paragraph3": "Busco seguir creciendo como desarrollador FullStack mientras aporto soluciones que realmente generen impacto."
-  },
-  "skills": {
-    "title": "Habilidades",
-    "technicalTitle": "Habilidades Técnicas",
-    "softTitle": "Habilidades Blandas",
-    "softDeck": "Descubre cómo trabajo a través de estas cartas",
-    "softDeckHint": "Haz clic en el mazo para revelar una carta",
-    "cardsFound": "{count} / 8 cartas descubiertas",
-    "softSkills": [
-      "Comunicación efectiva",
-      "Pensamiento crítico",
-      "Adaptabilidad",
-      "Resolución de problemas",
-      "Trabajo en equipo",
-      "Organización",
-      "Liderazgo técnico",
-      "Curiosidad analítica"
-    ],
-    "finalMessage": "Has descubierto mis mayores fortalezas"
-  },
-  "projects": {
-    "title": "Proyectos Destacados",
-    "subtitle": "Soluciones enfocadas en producto, arquitectura y experiencia de usuario",
-    "featured": {
-      "label": "Proyecto Destacado"
-    },
-    "filters": {
-      "all": "ALL",
-      "frontend": "FRONTEND",
-      "backend": "BACKEND",
-      "fullstack": "FULLSTACK"
-    },
-    "easypos": {
-      "label": "Proyecto Destacado",
-      "title": "EasyPOS",
-      "status": "In Progress",
-      "description": "Aplicación POS mobile offline-first enfocada en accesibilidad para adultos mayores y pequeños comercios.",
-      "tags": ["React Native", "TypeScript", "Firebase", "Expo EAS", "AsyncStorage"],
-      "product": "Ver Producto",
-      "github": "GitHub"
-    },
-    "prescription": {
-      "title": "Plataforma de Prescripciones",
-      "status": "Live",
-      "description": "Sistema full stack desarrollado con Next.js y NestJS utilizando TypeScript end-to-end y despliegue completo en producción.",
-      "tags": ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
-      "live": "Live ",
-      "frontend": "Frontend ",
-      "backend": "Backend "
-    },
-    "lawyer": {
-      "title": "Lawyer Landing Page",
-      "status": "Live",
-      "description": "Sitio web corporativo desarrollado con Astro y TypeScript enfocado en rendimiento, accesibilidad y posicionamiento SEO.",
-      "tags": ["Astro", "TypeScript", "SEO", "React"],
-      "visit": "Visitar Sitio "
-    }
-  },
-  "experience": {
-    "title": "Experiencia",
-    "freelance": {
-      "role": "Freelance Full Stack Developer",
-      "date": "Enero 2026 - Presente",
-      "bullets": [
-        "Desarrollo de soluciones web para clientes y proyectos independientes end-to-end, desde la definición de requerimientos hasta el despliegue en producción.",
-        "Análisis de requerimientos, identificación y resolución de problemas técnicos, optimización de procesos y construcción de software escalable y mantenible.",
-        "Construcción de interfaces modernas con React e integración de APIs REST enfocadas en UX y rendimiento."
-      ]
-    },
-    "blackbird": {
-      "role": "Full Stack Developer",
-      "company": "BlackBirdLabs",
-      "date": "Marzo 2025 - Noviembre 2025",
-      "bullets": [
-        "Desarrollo de aplicaciones web y móviles con React, React Native, Node.js y TypeScript.",
-        "Construcción de APIs escalables con Express y NestJS bajo arquitectura modular.",
-        "Implementación de bases de datos SQL/NoSQL (MySQL, PostgreSQL, MongoDB).",
-        "Uso de ORMs, autenticación, logging (Morgan) y consumo de APIs externas.",
-        "Trabajo bajo metodologías ágiles (Scrum) en equipos de desarrollo colaborativo."
-      ]
-    },
-    "multidespensas": {
-      "role": "Full Stack Developer Jr",
-      "company": "Multidespensas SAS",
-      "date": "2024",
-      "bullets": [
-        "Análisis de procesos empresariales y levantamiento de requerimientos con usuarios de diferentes áreas.",
-        "Diseño y desarrollo de un ERP interno para centralizar operaciones y mejorar la trazabilidad.",
-        "Desarrollo backend con NestJS, TypeScript y PostgreSQL bajo arquitectura modular y APIs REST.",
-        "Desarrollo frontend con React, TypeScript y PrimeReact para la gestión de procesos internos.",
-        "Automatización de flujos operativos, optimizando tiempos de gestión y reduciendo tareas manuales."
-      ]
-    },
-    "telsolutions": {
-      "role": "BI Analyst & Data Automation",
-      "company": "TelSolutions SAS",
-      "date": "2023 - 2024",
-      "bullets": [
-        "Diseño de dashboards interactivos en Power BI para monitoreo de indicadores comerciales y apoyo en la toma de decisiones.",
-        "Automatización de procesos de análisis y transformación de datos utilizando Python y Pandas.",
-        "Migración y estructuración de información desde Excel a PostgreSQL para centralizar y optimizar el acceso.",
-        "Implementación de segmentación y perfilamiento de clientes basada en patrones históricos de compra.",
-        "Generación de reportes estratégicos y modelos de proyección comercial para apoyar ventas y seguimiento de oportunidades."
-      ]
-    }
-  },
-  "education": {
-    "title": "Educación",
-    "engineering": {
-      "degree": "Ingeniería de Sistemas",
-      "school": "CUN",
-      "status": "En curso",
-      "bullets": [
-        "Formación en fundamentos de ingeniería de software, bases de datos, redes y arquitectura de sistemas.",
-        "Desarrollo de pensamiento lógico y estructurado aplicado a problemas computacionales."
-      ]
-    },
-    "generation": {
-      "degree": "Full Stack Java",
-      "school": "Generation",
-      "bullets": [
-        "Formación intensiva en desarrollo Full Stack con Java, Spring Boot, APIs REST y arquitectura backend moderna.",
-        "Desarrollo de aplicaciones web completas con frontend en JavaScript y Bootstrap y backend en Java con Spring Boot.",
-        "Enfoque en buenas prácticas, trabajo en equipo, metodologías ágiles y simulación de entorno laboral real.",
-        "Resolución de problemas reales mediante proyectos prácticos y entregables semanales."
-      ]
-    },
-    "sena": {
-      "degree": "Técnico en Sistemas",
-      "school": "SENA",
-      "date": "2021",
-      "bullets": [
-        "Bases en soporte técnico, mantenimiento de equipos y redes de computadoras.",
-        "Introducción a la programación y resolución de problemas técnicos.",
-        "Formación práctica que fortaleció la transición hacia el desarrollo de software."
-      ]
-    }
-  },
-  "contact": {
-    "title": "Contáctame",
-    "namePlaceholder": "Tu nombre",
-    "emailPlaceholder": "Tu correo electrónico",
-    "messagePlaceholder": "Tu mensaje",
-    "send": "Enviar mensaje",
-    "sending": "Enviando...",
-    "toast": {
-      "incomplete": {
-        "summary": "Campos incompletos",
-        "detail": "Por favor completa todos los campos."
-      },
-      "success": {
-        "summary": "¡Mensaje enviado!",
-        "detail": "Tu mensaje ha sido enviado correctamente."
-      },
-      "serverError": {
-        "summary": "Error al enviar",
-        "detail": "Hubo un problema con el servidor."
-      },
-      "connectionError": {
-        "summary": "Error de conexión",
-        "detail": "No se pudo contactar con el servidor."
-      }
-    }
-  },
-  "footer": {
-    "heading": "¿Tienes un proyecto o un desafío técnico?",
-    "paragraph": "Me especializo en analizar problemas complejos, diseñar soluciones escalables y construir aplicaciones robustas enfocadas en rendimiento, mantenibilidad y experiencia de usuario.",
-    "letsTalk": "Hablemos",
-    "name": "Hernan Jose Vasquez Araujo",
-    "role": "Full Stack Developer",
-    "copyright": "© 2026 Todos los derechos reservados."
-  }
 }
