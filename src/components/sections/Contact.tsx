@@ -1,10 +1,12 @@
 import { useState, useRef } from "react";
+import { useTranslation } from 'react-i18next';
 import { Toast } from "primereact/toast";
 import { Button } from "primereact/button";
 import { motion } from "framer-motion";
 import SectionTitle from "../ui/SectionTitle";
 
 export const Contact = () => {
+  const { t } = useTranslation();
   const toast = useRef<Toast>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSending, setIsSending] = useState(false);
@@ -20,8 +22,8 @@ export const Contact = () => {
     if (!formData.name || !formData.email || !formData.message) {
       toast.current?.show({
         severity: "warn",
-        summary: "Campos incompletos",
-        detail: "Por favor completa todos los campos.",
+        summary: t('contact.toast.incomplete.summary'),
+        detail: t('contact.toast.incomplete.detail'),
         life: 3000,
       });
       return;
@@ -39,24 +41,24 @@ export const Contact = () => {
       if (res.ok) {
         toast.current?.show({
           severity: "success",
-          summary: "¡Mensaje enviado!",
-          detail: "Tu mensaje ha sido enviado correctamente 🎉",
+          summary: t('contact.toast.success.summary'),
+          detail: t('contact.toast.success.detail'),
           life: 4000,
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
         toast.current?.show({
           severity: "error",
-          summary: "Error al enviar",
-          detail: "Hubo un problema con el servidor.",
+          summary: t('contact.toast.serverError.summary'),
+          detail: t('contact.toast.serverError.detail'),
           life: 4000,
         });
       }
     } catch {
       toast.current?.show({
         severity: "error",
-        summary: "Error de conexión",
-        detail: "No se pudo contactar con el servidor.",
+        summary: t('contact.toast.connectionError.summary'),
+        detail: t('contact.toast.connectionError.detail'),
         life: 4000,
       });
     } finally {
@@ -70,7 +72,7 @@ export const Contact = () => {
       className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 px-6 py-24"
     >
       <Toast ref={toast} />
-      <SectionTitle>Contáctame</SectionTitle>
+      <SectionTitle>{t('contact.title')}</SectionTitle>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +86,7 @@ export const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Tu nombre"
+            placeholder={t('contact.namePlaceholder')}
             value={formData.name}
             onChange={handleChange}
             className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -92,21 +94,21 @@ export const Contact = () => {
           <input
             type="email"
             name="email"
-            placeholder="Tu correo electrónico"
+            placeholder={t('contact.emailPlaceholder')}
             value={formData.email}
             onChange={handleChange}
             className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <textarea
             name="message"
-            placeholder="Tu mensaje"
+            placeholder={t('contact.messagePlaceholder')}
             value={formData.message}
             onChange={handleChange}
             className="w-full p-3 h-32 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
           />
           <Button
             type="submit"
-            label={isSending ? "Enviando..." : "Enviar mensaje"}
+            label={isSending ? t('contact.sending') : t('contact.send')}
             icon={isSending ? "pi pi-spin pi-spinner" : "pi pi-send"}
             disabled={isSending}
             className="w-full !bg-cyan-300 !border-none !text-black !font-medium hover:opacity-90 transition"

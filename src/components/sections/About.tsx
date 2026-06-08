@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import SectionTitle from "../ui/SectionTitle";
 
-export const About = () => (
+export const About = () => {
+  const { t } = useTranslation();
+
+  return (
   <section
     id="about"
     className="relative py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200"
@@ -16,7 +20,7 @@ export const About = () => (
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <SectionTitle>Sobre mí</SectionTitle>
+      <SectionTitle>{t('about.title')}</SectionTitle>
 
       <motion.p
         className="text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto mt-6"
@@ -24,8 +28,7 @@ export const About = () => (
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 1 }}
       >
-        Me interesa entender los problemas antes de escribir código.
-        Disfruto construir soluciones claras y bien estructuradas, donde cada decisión tenga sentido tanto a nivel técnico como funcional.
+        {t('about.paragraph1')}
       </motion.p>
 
       <motion.p
@@ -34,12 +37,7 @@ export const About = () => (
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 1 }}
       >
-        He trabajado desarrollando aplicaciones web utilizando{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">Java</span>,{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">Spring Boot</span>,{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">React</span> y{" "}
-        <span className="text-[var(--color-primary-light)] font-medium">Node.js</span>.
-        Me enfoco en escribir código mantenible, aplicar buenas prácticas y mejorar continuamente con cada proyecto que desarrollo.
+        {t('about.paragraph2')}
       </motion.p>
 
       <motion.p
@@ -48,9 +46,9 @@ export const About = () => (
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 1 }}
       >
-        Busco seguir creciendo como desarrollador FullStack mientras aporto soluciones que realmente generen impacto.
+        {t('about.paragraph3')}
       </motion.p>
 
     </motion.div>
   </section>
-);
+)};

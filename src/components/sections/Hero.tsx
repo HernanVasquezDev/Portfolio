@@ -1,8 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import { Github, Linkedin } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const reduceMotion = useReducedMotion();
 
   return (
@@ -41,7 +43,7 @@ export const Hero = () => {
           transition={{ delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-4"
         >
-          Hernan Vasquez
+          {t('hero.title')}
         </motion.h1>
 
         {/* Cargo */}
@@ -51,7 +53,7 @@ export const Hero = () => {
           transition={{ delay: 0.35 }}
           className="text-lg md:text-4xl text-cyan-300 font-medium mb-6"
         >
-          Full Stack Developer
+          {t('hero.subtitle')}
         </motion.h2>
 
         {/* Descripción */}
@@ -61,7 +63,7 @@ export const Hero = () => {
           transition={{ delay: 0.5 }}
           className="max-w-2xl text-gray-400 text-base md:text-lg leading-relaxed mb-10"
         >
-          Analizo procesos, identifico oportunidades de mejora y las transformo en soluciones digitales funcionales. Disfruto entender cómo funcionan las cosas, encontrar lo que puede optimizarse y construir herramientas que generen un impacto real.
+          {t('hero.paragraph')}
         </motion.p>
 
         {/* Botones */}
@@ -79,7 +81,7 @@ export const Hero = () => {
             }
             className="px-6 py-3 rounded-xl bg-cyan-300 text-black font-medium hover:opacity-90 transition"
           >
-            Ver proyectos
+            {t('hero.cta.viewProjects')}
           </button>
 
           <button
@@ -90,7 +92,7 @@ export const Hero = () => {
             }
             className="px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-white hover:bg-white/10 transition"
           >
-            Contactarme
+            {t('hero.cta.contactMe')}
           </button>
 
           <a
@@ -98,7 +100,7 @@ export const Hero = () => {
             download
             className="px-6 py-3 rounded-xl border border-white/10 text-gray-300 hover:text-white hover:bg-white/5 transition"
           >
-            Descargar CV
+            {t('hero.cta.downloadCV')}
           </a>
         </motion.div>
 

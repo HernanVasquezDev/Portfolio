@@ -14,7 +14,7 @@ const AnimatedLogo: React.FC<{ onClick?: () => void }> = ({ onClick }) => {
         setDisplayedText(text.slice(0, index));
         index++;
 
-        setTimeout(type, 360); // 👈 velocidad más humana
+        setTimeout(type, 360);
       }
     };
 

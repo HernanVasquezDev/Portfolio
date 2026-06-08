@@ -1,14 +1,22 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import SectionTitle from "../ui/SectionTitle";
 
-export const Experience = () => (
-  <section
-    id="experience"
-    className="relative py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200"
-  >
-    <SectionTitle>Experiencia</SectionTitle>
+export const Experience = () => {
+  const { t } = useTranslation();
+  const freelanceBullets = t('experience.freelance.bullets', { returnObjects: true }) as string[];
+  const blackbirdBullets = t('experience.blackbird.bullets', { returnObjects: true }) as string[];
+  const multidespensasBullets = t('experience.multidespensas.bullets', { returnObjects: true }) as string[];
+  const telsolutionsBullets = t('experience.telsolutions.bullets', { returnObjects: true }) as string[];
 
-    <div className="max-w-5xl mx-auto mt-10 relative">
+  return (
+    <section
+      id="experience"
+      className="relative py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200"
+    >
+      <SectionTitle>{t('experience.title')}</SectionTitle>
+
+      <div className="max-w-5xl mx-auto mt-10 relative">
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-[var(--color-primary)]/40"></div>
 
       <div className="space-y-20">
@@ -24,26 +32,18 @@ export const Experience = () => (
 
           <div className="md:w-1/2 md:text-right md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">
-              Freelance Full Stack Developer
+              {t('experience.freelance.role')}
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              Enero 2026 - Presente
+              {t('experience.freelance.date')}
             </p>
           </div>
 
           <div className="md:w-1/2 md:pl-10">
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-              <li>
-                Desarrollo de soluciones web para clientes y proyectos independiente end-to-end, abordando desde la definición de requerimientos hasta el despliegue en producción.
-              </li>
-
-              <li>
-                Análisis de requerimientos, identificación y resolución de problemas técnicos mediante análisis de requisitos, optimización de procesos y construcción de software basado en la escalabilidad y mantenibilidad.
-              </li>
-
-              <li>
-                Construcción de interfaces modernas con React, Angular, Integración y Construcción de APIs REST y desarrollo de funcionalidades enfocadas en UX y rendimiento.
-              </li>
+              {freelanceBullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
             </ul>
           </div>
         </motion.div>
@@ -59,34 +59,18 @@ export const Experience = () => (
 
           <div className="md:w-1/2 md:text-right md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">
-              Full Stack Developer
+              {t('experience.blackbird.role')}
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              BlackBirdLabs | Marzo 2025 - Noviembre 2025
+              {t('experience.blackbird.company')} | {t('experience.blackbird.date')}
             </p>
           </div>
 
           <div className="md:w-1/2 md:pl-10">
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-              <li>
-                Desarrollo de aplicaciones web y móviles con React, React Native, Node.js y TypeScript.
-              </li>
-
-              <li>
-                Construcción de APIs escalables con Express y NestJS bajo arquitectura modular.
-              </li>
-
-              <li>
-                Implementación de bases de datos SQL/NoSQL (MySQL, PostgreSQL, MongoDB, Firebase).
-              </li>
-
-              <li>
-                Uso de ORMs, autenticación, logging (Morgan) y consumo de APIs externas.
-              </li>
-
-              <li>
-                Trabajo bajo metodologías ágiles (Scrum) en equipos de desarrollo colaborativo.
-              </li>
+              {blackbirdBullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
             </ul>
           </div>
         </motion.div>
@@ -103,34 +87,18 @@ export const Experience = () => (
 
           <div className="md:w-1/2 md:text-right md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">
-              Full Stack Developer Jr
+              {t('experience.multidespensas.role')}
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              Multidespensas SAS — 2024
+              {t('experience.multidespensas.company')} — {t('experience.multidespensas.date')}
             </p>
           </div>
 
           <div className="md:w-1/2 md:pl-10">
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-              <li>
-                Análisis de procesos empresariales y levantamiento de requerimientos junto a usuarios de distintas áreas.
-              </li>
-
-              <li>
-                Diseño y desarrollo de un ERP interno para centralizar operaciones y mejorar la trazabilidad organizacional.
-              </li>
-
-              <li>
-                Desarrollo backend con NestJS, TypeScript y PostgreSQL bajo arquitectura modular y APIs REST.
-              </li>
-
-              <li>
-                Desarrollo frontend con React, TypeScript y PrimeReact para la gestión de procesos internos.
-              </li>
-
-              <li>
-                Automatización de flujos operativos, optimizando tiempos de gestión y reduciendo tareas manuales.
-              </li>
+              {multidespensasBullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
             </ul>
           </div>
         </motion.div>
@@ -146,34 +114,18 @@ export const Experience = () => (
 
           <div className="md:w-1/2 md:text-right md:pr-10">
             <h3 className="text-2xl font-semibold text-[var(--color-light)]">
-              BI Analyst & Data Automation
+              {t('experience.telsolutions.role')}
             </h3>
             <p className="italic text-gray-400 text-sm md:text-base">
-              TelSolutions SAS — 2023 - 2024
+              {t('experience.telsolutions.company')} — {t('experience.telsolutions.date')}
             </p>
           </div>
 
           <div className="md:w-1/2 md:pl-10">
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-              <li>
-                Diseño de dashboards interactivos en Power BI para monitoreo de indicadores comerciales y toma de decisiones.
-              </li>
-
-              <li>
-                Automatización de procesos de análisis y transformación de datos utilizando Python y Pandas.
-              </li>
-
-              <li>
-                Migración y estructuración de información desde Excel hacia PostgreSQL para centralizar y optimizar el acceso a los datos.
-              </li>
-
-              <li>
-                Implementación de segmentación y perfilamiento de clientes basada en patrones históricos de compra.
-              </li>
-
-              <li>
-                Generación de reportes estratégicos y modelos de proyección comercial para apoyar procesos de ventas y seguimiento de oportunidades.
-              </li>
+              {telsolutionsBullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
             </ul>
           </div>
         </motion.div>
@@ -184,4 +136,4 @@ export const Experience = () => (
 
     <div className="md:hidden mt-12 w-[2px] h-24 mx-auto bg-[var(--color-primary)]/40 rounded-full"></div>
   </section>
-);
+)};

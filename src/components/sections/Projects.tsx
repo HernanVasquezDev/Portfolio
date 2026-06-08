@@ -1,15 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
 import SectionTitle from "../ui/SectionTitle";
 import type { Project } from "../../types/Projects";
 
 const projects: Project[] = [
   {
-    title: "EasyPOS",
-
-    description:
-      "Aplicación POS mobile offline-first enfocada en accesibilidad para adultos mayores y pequeños comercios.",
-
+    title: "projects.easypos.title",
+    description: "projects.easypos.description",
     tech: [
       "React Native",
       "TypeScript",
@@ -17,24 +15,18 @@ const projects: Project[] = [
       "Expo EAS",
       "AsyncStorage",
     ],
-
     image: "/images/project/EasyPOS.png",
-
     featured: true,
-
     role: "fullstack",
-
     status: "In Progress",
-
     links: [
       {
-        label: "Ver Producto",
+        label: "projects.easypos.product",
         url: "https://landing-easy-pos.vercel.app/",
         variant: "primary",
       },
-
       {
-        label: "GitHub",
+        label: "projects.easypos.github",
         url: "https://github.com/HernanVasquezDev/EasyPOS.git",
         variant: "secondary",
       },
@@ -42,11 +34,8 @@ const projects: Project[] = [
   },
 
   {
-    title: "Plataforma de Prescripciones",
-
-    description:
-      "Sistema full stack desarrollado con Next.js y NestJS utilizando TypeScript end-to-end y despliegue completo en producción.",
-
+    title: "projects.prescription.title",
+    description: "projects.prescription.description",
     tech: [
       "Next.js",
       "NestJS",
@@ -54,28 +43,22 @@ const projects: Project[] = [
       "PostgreSQL",
       "Prisma",
     ],
-
     image: "/images/project/PrescriptionsLogin.png",
-
     role: "fullstack",
-
     status: "Live",
-
     links: [
       {
-        label: "Live",
+        label: "projects.prescription.live",
         url: "https://prescriptionfrontend.onrender.com/login",
         variant: "primary",
       },
-
       {
-        label: "Frontend",
+        label: "projects.prescription.frontend",
         url: "https://github.com/HernanVasquezDev/PrescriptionFrontend.git",
         variant: "secondary",
       },
-
       {
-        label: "Backend",
+        label: "projects.prescription.backend",
         url: "https://github.com/HernanVasquezDev/PrescriptionsBackend.git",
         variant: "secondary",
       },
@@ -83,22 +66,15 @@ const projects: Project[] = [
   },
 
   {
-    title: "Lawyer Landing Page",
-
-    description:
-      "Sitio web corporativo desarrollado con Astro y TypeScript enfocado en rendimiento, accesibilidad y posicionamiento SEO.",
-
+    title: "projects.lawyer.title",
+    description: "projects.lawyer.description",
     tech: ["Astro", "TypeScript", "SEO", "React"],
-
     image: "/images/project/landinglaw.png",
-
     role: "frontend",
-
     status: "Live",
-
     links: [
       {
-        label: "Visitar Sitio",
+        label: "projects.lawyer.visit",
         url: "https://abogadalizethcarrillo.netlify.app",
         variant: "primary",
       },
@@ -107,6 +83,7 @@ const projects: Project[] = [
 ];
 
 export const Projects = () => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<
     "all" | "frontend" | "backend" | "fullstack"
   >("all");
@@ -114,7 +91,7 @@ export const Projects = () => {
   const filteredProjects =
     filter === "all"
       ? projects
-      : projects.filter((p) => p.role === filter);0
+      : projects.filter((p) => p.role === filter);
 
   const featured =
     filteredProjects.find((p) => p.featured) || filteredProjects[0];
@@ -127,8 +104,8 @@ export const Projects = () => {
       className="py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <SectionTitle subtitle="Soluciones enfocadas en producto, arquitectura y experiencia de usuario">
-          Proyectos Destacados
+        <SectionTitle subtitle={t('projects.subtitle')}>
+          {t('projects.title')}
         </SectionTitle>
 
         {/* FILTERS */}
@@ -175,11 +152,11 @@ export const Projects = () => {
               <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
                 <div>
                   <p className="text-xs text-[--color-primary] uppercase tracking-widest mb-2">
-                    Proyecto Destacado
+                    {t('projects.featured.label')}
                   </p>
 
                   <h3 className="text-3xl font-bold">
-                    {featured.title}
+                    {t(featured.title)}
                   </h3>
                 </div>
 
@@ -197,7 +174,7 @@ export const Projects = () => {
               </div>
 
               <p className="text-gray-400 max-w-3xl leading-relaxed mb-6">
-                {featured.description}
+                {t(featured.description)}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
@@ -225,7 +202,7 @@ export const Projects = () => {
                         : "border border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-gray-900"
                     }`}
                   >
-                    {link.label}
+                    {t(link.label)}
                   </a>
                 ))}
               </div>
@@ -261,7 +238,7 @@ export const Projects = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-semibold">
-                    {proj.title}
+                    {t(proj.title)}
                   </h3>
 
                   {proj.status && (
@@ -278,7 +255,7 @@ export const Projects = () => {
                 </div>
 
                 <p className="text-gray-400 text-sm leading-relaxed mb-5">
-                  {proj.description}
+                  {t(proj.description)}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -306,7 +283,7 @@ export const Projects = () => {
                           : "text-gray-400 hover:text-white"
                       }`}
                     >
-                      {link.label} →
+                      {t(link.label)} →
                     </a>
                   ))}
                 </div>

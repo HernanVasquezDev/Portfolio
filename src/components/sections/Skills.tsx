@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import SectionTitle from "../ui/SectionTitle";
 import { Code2, Brain } from "lucide-react";
 import {
@@ -40,17 +41,9 @@ const technicalSkills = [
   { name: "TailwindCSS", Icon: SiTailwindcss, color: "#06B6D4" },
 ];
 
-const softSkills = [
-  "Comunicación efectiva",
-  "Pensamiento crítico",
-  "Adaptabilidad",
-  "Resolución de problemas",
-  "Trabajo en equipo",
-  "Organización",
-  "Liderazgo técnico",
-  "Curiosidad analítica",
-];
 export const Skills = () => {
+  const { t } = useTranslation();
+  const softSkills = t("skills.softSkills", { returnObjects: true }) as string[];
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [revealedCards, setRevealedCards] = useState<number[]>([]);
 
@@ -82,7 +75,7 @@ export const Skills = () => {
       id="skills"
       className="py-28 px-6 text-center bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200"
     >
-      <SectionTitle>Habilidades</SectionTitle>
+      <SectionTitle>{t("skills.title")}</SectionTitle>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
         {/* Habilidades técnicas */}
@@ -95,7 +88,7 @@ export const Skills = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-8">
             <Code2 className="text-[var(--color-primary)] w-8 h-8" />
-            <h3 className="text-2xl font-semibold text-[var(--color-light)]">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold text-[var(--color-light)]">{t("skills.technicalTitle")}</h3>
           </div>
 
           {/* Grid de logos técnicos */}
@@ -141,11 +134,11 @@ export const Skills = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-6">
             <Brain className="text-[var(--color-primary)] w-8 h-8" />
-            <h3 className="text-2xl font-semibold">Soft Skills</h3>
+            <h3 className="text-2xl font-semibold">{t("skills.softTitle")}</h3>
           </div>
 
           <div className="flex items-center justify-center gap-2 text-gray-400 mb-6">
-            <p>Descubre cómo trabajo a través de estas cartas</p>
+            <p>{t("skills.softDeck")}</p>
             <GrLinkDown className="w-5 h-5 flex-shrink-0" />
           </div>
 
@@ -166,7 +159,7 @@ export const Skills = () => {
             ) : (
               <div className="w-36 h-48 border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center">
                 <p className="text-gray-500 text-sm text-center px-2">
-                  Haz clic en el mazo para revelar una carta
+                  {t("skills.softDeckHint")}
                 </p>
               </div>
             )}
@@ -230,7 +223,7 @@ export const Skills = () => {
 
           {/* PROGRESO */}
           <p className="text-sm text-gray-500 mt-4">
-            {revealedCards.length} / {softSkills.length} cartas descubiertas
+            {t("skills.cardsFound", { count: revealedCards.length })}
           </p>
 
           {/* FINAL */}
@@ -240,7 +233,7 @@ export const Skills = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              Has descubierto mis mayores fortalezas
+              {t("skills.finalMessage")}
             </motion.p>
           )}
         </motion.div>

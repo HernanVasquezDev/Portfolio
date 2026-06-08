@@ -57,3 +57,11 @@ h2 { font-size: clamp(1.25rem, 2.2vw, 2rem); }
 
 /* Card helper matching component styles */
 .glass-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.03); }
+
+.emoji {
+  font-family:
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Noto Color Emoji",
+    sans-serif;
+}

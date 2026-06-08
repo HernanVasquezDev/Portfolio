@@ -1,7 +1,10 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative border-t border-white/5 bg-[#08080B]">
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -9,13 +12,11 @@ export const Footer = () => {
         {/* CTA */}
         <div className="text-center mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            ¿Tienes un proyecto o un desafío técnico?
+            {t('footer.heading')}
           </h3>
 
           <p className="max-w-2xl mx-auto text-gray-400 leading-relaxed">
-            Me especializo en analizar problemas complejos, diseñar soluciones
-            escalables y construir aplicaciones robustas enfocadas en
-            rendimiento, mantenibilidad y experiencia de usuario.
+            {t('footer.paragraph')}
           </p>
 
           <a
@@ -23,7 +24,7 @@ export const Footer = () => {
             className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-cyan-300 text-black font-medium hover:opacity-90 transition"
           >
             <Mail size={18} />
-            Hablemos
+            {t('footer.letsTalk')}
           </a>
         </div>
 
@@ -58,15 +59,15 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-white/5 pt-8 text-center">
           <p className="text-white font-medium">
-            Hernan Jose Vasquez Araujo
+            {t('footer.name')}
           </p>
 
           <p className="text-sm text-cyan-300 mt-1">
-            Full Stack Developer
+            {t('footer.role')}
           </p>
 
           <p className="text-sm text-gray-500 mt-4">
-            © {new Date().getFullYear()} Todos los derechos reservados.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedLogo from "./AnimatedLogo";
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const sections = [
-  { id: "hero", label: "Inicio" },
-  // { id: "about", label: "Sobre mí" },
-  { id: "projects", label: "Proyectos" },
-  { id: "experience", label: "Experiencia" },
-  { id: "education", label: "Educación" },
-  { id: "contact", label: "Contacto" },
+  { id: "hero", labelKey: "nav.home" },
+  { id: "projects", labelKey: "nav.projects" },
+  { id: "experience", labelKey: "nav.experience" },
+  { id: "education", labelKey: "nav.education" },
+  { id: "contact", labelKey: "nav.contact" },
 ];
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState("hero");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -35,12 +37,19 @@ export const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    // call once to set initial state (transparency / active section)
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const handleLanguageChange = () => {
     setOpen(false);
   };
 
@@ -58,20 +67,25 @@ export const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <AnimatedLogo onClick={() => scrollToSection("hero")} />
 
-        {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-8 text-gray-300">
-          {sections.map(({ id, label }) => (
-            <li
-              key={id}
-              onClick={() => scrollToSection(id)}
-              className={`cursor-pointer hover:text-[--color-primary] transition-colors ${
-                active === id ? "text-[--color-primary] font-medium" : ""
-              }`}
-            >
-              {label}
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-6">
+          {/* DESKTOP MENU */}
+          <ul className="hidden md:flex gap-8 text-gray-300">
+            {sections.map(({ id, labelKey }) => (
+              <li
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className={`cursor-pointer hover:text-[--color-primary] transition-colors ${
+                  active === id ? "text-[--color-primary] font-medium" : ""
+                }`}
+              >
+                {t(labelKey)}
+              </li>
+            ))}
+          </ul>
+
+          {/* LANGUAGE SWITCHER DESKTOP */}
+          <LanguageSwitcher onLanguageChange={handleLanguageChange} />
+        </div>
 
         {/* HAMBURGER */}
         <div
@@ -116,7 +130,10 @@ export const Navbar = () => {
             className="md:hidden w-full overflow-hidden bg-gray-950/95 backdrop-blur-md border-t border-gray-800"
           >
             <ul className="flex flex-col items-center py-6 gap-6 text-gray-300 text-lg">
-              {sections.map(({ id, label }) => (
+              <li className="flex gap-2">
+                <LanguageSwitcher onLanguageChange={handleLanguageChange} />
+              </li>
+              {sections.map(({ id, labelKey }) => (
                 <li
                   key={id}
                   onClick={() => scrollToSection(id)}
@@ -124,7 +141,7 @@ export const Navbar = () => {
                     active === id ? "text-[--color-primary] font-medium" : ""
                   }`}
                 >
-                  {label}
+                  {t(labelKey)}
                 </li>
               ))}
             </ul>
