@@ -75,7 +75,7 @@ export const Education = () => {
         </motion.div>
 
         {/* SENA */}
-        <motion.div
+        {/* <motion.div
           className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export const Education = () => {
               ))}
             </ul>
           </div>
-        </motion.div>
+        </motion.div> */}
 
       </div>
     </div>
