@@ -6,7 +6,6 @@ export const Education = () => {
   const { t } = useTranslation();
   const engineeringBullets = t('education.engineering.bullets', { returnObjects: true }) as string[];
   const generationBullets = t('education.generation.bullets', { returnObjects: true }) as string[];
-  const senaBullets = t('education.sena.bullets', { returnObjects: true }) as string[];
 
   return (
     <section

@@ -179,17 +179,8 @@
                 "Enfoque en buenas prácticas, trabajo en equipo, metodologías ágiles y simulación de entorno laboral real.",
                 "Resolución de problemas reales mediante proyectos prácticos y entregables semanales."
             ]
-        },
-        "sena": {
-            "degree": "Técnico en Sistemas",
-            "school": "SENA",
-            "date": "2021",
-            "bullets": [
-                "Bases en soporte técnico, mantenimiento de equipos y redes de computadoras.",
-                "Introducción a la programación y resolución de problemas técnicos.",
-                "Formación práctica que fortaleció la transición hacia el desarrollo de software."
-            ]
         }
+
     },
     "contact": {
         "title": "Contáctame",
